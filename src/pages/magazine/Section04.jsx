@@ -8,8 +8,6 @@ const StyledSection04 = styled.img`
   margin: 0 auto;
 `;
 
-export const Section04 = () => {
-  return (
-    <StyledSection04 src="https://placehold.co/1100x800" alt="Section 04" />
-  );
+export const Section04 = ({ imageUrl }) => {
+  return <StyledSection04 src={imageUrl} alt="Section 04" />;
 };
