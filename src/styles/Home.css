@@ -1,0 +1,208 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+
+.home-content {
+  align-self: stretch;
+  background-color: #FFFFFF;
+  height: 1229px;
+}
+
+/* Header Styles */
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: #FDFBEE;
+}
+
+.header-content {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: #FDFBEE;
+  padding: 16px 16px 16px 42px;
+  margin-bottom: 120px;
+  box-shadow: 0px 2px 4px #00000040;
+}
+
+.header-logo {
+  width: 262px;
+  height: 95px;
+  margin-top: 4px;
+  margin-right: 78px;
+  object-fit: fill;
+}
+
+.header-menu {
+  color: #000000;
+  font-size: 38px;
+  margin-top: 59px;
+  margin-right: 65px;
+}
+
+.header-menu.community {
+  flex: 1;
+  text-align: center;
+  margin-right: 0;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+}
+
+.header-links {
+  color: #3A3A3A;
+  font-size: 18px;
+  margin-bottom: 29px;
+}
+
+.header-icons {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 102px;
+}
+
+.header-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 30px;
+  object-fit: fill;
+}
+
+.header-icon:last-child {
+  margin-right: 0;
+}
+
+/* Weather Section Styles */
+.weather-section {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 56px;
+  margin-left: 66px;
+}
+
+.section-title {
+  color: #000000;
+  font-size: 36px;
+  margin-right: 766px;
+}
+
+.weather-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.weather-labels {
+  color: #000000;
+  font-size: 38px;
+  margin-right: 18px;
+  white-space: pre-line;
+}
+
+.weather-colons {
+  color: #000000;
+  font-size: 38px;
+  margin-top: 26px;
+  margin-right: 42px;
+  white-space: pre-line;
+}
+
+.weather-icons {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  margin-top: 11px;
+  margin-right: 30px;
+}
+
+.weather-icons:last-child {
+  margin-right: 0;
+}
+
+.weather-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 32px;
+  object-fit: fill;
+}
+
+.weather-icon:last-child {
+  margin-bottom: 0;
+}
+
+.temperature {
+  color: #000000;
+  font-size: 38px;
+  margin-bottom: 35px;
+}
+
+/* Chat Section Styles */
+.chat-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 72px;
+}
+
+.chat-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: url('https://storage.googleapis.com/tagjs-prod.appspot.com/v1/AiqsF1Zsxi/cujylbni_expires_30_days.png');
+  background-size: cover;
+  background-position: center;
+  padding: 70px 45px 101px 33px;
+}
+
+.chat-text {
+  color: #000000;
+  font-size: 30px;
+  width: 244px;
+}
+
+.chat-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: stretch;
+  margin-bottom: 16px;
+}
+
+.chat-link {
+  color: #A294F9;
+}
+
+.chat-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+.arrow-text {
+  color: #A294F9;
+  font-size: 80px;
+  margin-right: 4px;
+}
+
+.chat-image {
+  width: 371px;
+  height: 371px;
+  margin-left: 207px;
+  object-fit: fill;
+} 
