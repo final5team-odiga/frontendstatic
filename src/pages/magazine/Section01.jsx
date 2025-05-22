@@ -74,19 +74,17 @@ const StyledImage = styled.img`
 `;
 
 // Component
-export const Section01 = () => {
+export const Section01 = ({ title, subtitle, tagline, imageUrl }) => {
   return (
     <StyledSection01>
       <StyledFrame1>
-        <StyledVelkommenText>Velkommen til København.</StyledVelkommenText>
+        <StyledVelkommenText>{title}</StyledVelkommenText>
         <StyledFrame2>
-          <StyledQuoteText>
-            Sometimes, a quiet city offers the best kind of reset.
-          </StyledQuoteText>
-          <StyledTaglineText>ARTS & CULTURE, DESIGN</StyledTaglineText>
+          <StyledQuoteText>{subtitle}</StyledQuoteText>
+          <StyledTaglineText>{tagline}</StyledTaglineText>
         </StyledFrame2>
       </StyledFrame1>
-      <StyledImage src="https://placehold.co/550x800" alt="Copenhagen" />
+      <StyledImage src={imageUrl} alt="Selection image" />
     </StyledSection01>
   );
 };
