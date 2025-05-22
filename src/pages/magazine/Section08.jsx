@@ -82,87 +82,27 @@ const MetaDescription = styled.div`
   line-height: 24px;
 `;
 
-export const Section08 = () => {
+export const Section08 = ({ title, body }) => {
   return (
     <StyledSection08>
-      <StyledTitle>RELATED STORIES</StyledTitle>
+      <StyledTitle>{title}</StyledTitle>
       <StyledGrid>
-        <StoryCard>
-          <StoryImage src="https://placehold.co/151x301" />
-          <StoryMeta>
-            <MetaCategory>ARTS & CULTURE, ISSUE 49</MetaCategory>
-            <MetaTextGroup>
-              <MetaTitle>Karin Mamma Andersson</MetaTitle>
-              <MetaDescription>
-                Inside the moody, mysterious world of Sweden’s preeminent
-                painter.
-              </MetaDescription>
-            </MetaTextGroup>
-          </StoryMeta>
-        </StoryCard>
-        <StoryCard>
-          <StoryImage src="https://placehold.co/151x301" />
-          <StoryMeta>
-            <MetaCategory>FILMS, ISSUE 49</MetaCategory>
-            <MetaTextGroup>
-              <MetaTitle>Ruben Östlund</MetaTitle>
-              <MetaDescription>
-                Crude, contrary—and killing it: Meet the auteur of awkwardness.
-              </MetaDescription>
-            </MetaTextGroup>
-          </StoryMeta>
-        </StoryCard>
-        <StoryCard>
-          <StoryImage height="220px" src="https://placehold.co/151x220" />
-          <StoryMeta>
-            <MetaCategory>MUSIC, ISSUE 49</MetaCategory>
-            <MetaTextGroup>
-              <MetaTitle>Tove Lo</MetaTitle>
-              <MetaDescription>
-                The pop star reflects on the big feelings behind her biggest
-                hits.
-              </MetaDescription>
-            </MetaTextGroup>
-          </StoryMeta>
-        </StoryCard>
-        <StoryCard>
-          <StoryImage src="https://placehold.co/151x301" />
-          <StoryMeta>
-            <MetaCategory>FASHION, ISSUE 22</MetaCategory>
-            <MetaTextGroup>
-              <MetaTitle>Day in the Life: Stine Goya</MetaTitle>
-              <MetaDescription>
-                Stine Goya has been a quiet presence in the fashion world for
-                more than a decade—first as a model, then as an editor, now as a
-                designer.
-              </MetaDescription>
-            </MetaTextGroup>
-          </StoryMeta>
-        </StoryCard>
-        <StoryCard>
-          <StoryImage src="https://placehold.co/151x301" />
-          <StoryMeta>
-            <MetaCategory>ARTS & CULTURE, ISSUE 49</MetaCategory>
-            <MetaTextGroup>
-              <MetaTitle>Amalie Smith</MetaTitle>
-              <MetaDescription>
-                The Danish arts writer finding clarity between the lines.
-              </MetaDescription>
-            </MetaTextGroup>
-          </StoryMeta>
-        </StoryCard>
-        <StoryCard>
-          <StoryImage height="151px" src="https://placehold.co/151x151" />
-          <StoryMeta>
-            <MetaCategory>FILMS, ISSUE 49</MetaCategory>
-            <MetaTextGroup>
-              <MetaTitle>Fares Fares</MetaTitle>
-              <MetaDescription>
-                After almost 25 years, the master actor steps behind the camera.
-              </MetaDescription>
-            </MetaTextGroup>
-          </StoryMeta>
-        </StoryCard>
+        {body.map((story, i) => (
+          <StoryCard key={i}>
+            <StoryImage
+              src={story.imageUrl}
+              style={story.imageHeight ? { height: story.imageHeight } : {}}
+              alt={story.title}
+            />
+            <StoryMeta>
+              <MetaCategory>{story.category}</MetaCategory>
+              <MetaTextGroup>
+                <MetaTitle>{story.title}</MetaTitle>
+                <MetaDescription>{story.description}</MetaDescription>
+              </MetaTextGroup>
+            </StoryMeta>
+          </StoryCard>
+        ))}
       </StyledGrid>
     </StyledSection08>
   );

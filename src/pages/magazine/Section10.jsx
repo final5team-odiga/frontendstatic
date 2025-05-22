@@ -69,27 +69,27 @@ const productData = Array(8).fill({
   price: "Issue 36\n$18",
 });
 
-export const Section10 = () => {
+export const Section10 = ({ body }) => {
   return (
     <StyledSection10>
       <Row>
-        {productData.slice(0, 4).map((item, i) => (
+        {body.slice(0, 4).map((item, i) => (
           <ProductBox key={i}>
-            <ProductImage src={item.img} alt={`Product ${i + 1}`} />
+            <ProductImage src={item.imageUrl} alt={`Product ${i + 1}`} />
             <ProductTextBlock>
-              <ProductLabel>{item.label}</ProductLabel>
-              <ProductPrice>{item.price}</ProductPrice>
+              <ProductLabel>{item.title}</ProductLabel>
+              <ProductPrice>{item.tagline}</ProductPrice>
             </ProductTextBlock>
           </ProductBox>
         ))}
       </Row>
       <Row>
-        {productData.slice(4, 8).map((item, i) => (
+        {body.slice(4, 8).map((item, i) => (
           <ProductBox key={i + 4}>
-            <ProductImage src={item.img} alt={`Product ${i + 5}`} />
+            <ProductImage src={item.imageUrl} alt={`Product ${i + 5}`} />
             <ProductTextBlock>
-              <ProductLabel>{item.label}</ProductLabel>
-              <ProductPrice>{item.price}</ProductPrice>
+              <ProductLabel>{item.title}</ProductLabel>
+              <ProductPrice>{item.tagline}</ProductPrice>
             </ProductTextBlock>
           </ProductBox>
         ))}

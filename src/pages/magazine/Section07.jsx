@@ -89,18 +89,21 @@ const StyledSection07 = styled.div`
   position: relative;
 `;
 
-export const Section07 = () => {
+export const Section07 = ({
+  title,
+  subtitle,
+  body,
+  imageUrl,
+  subImageUrls,
+}) => {
   return (
     <StyledSection07>
       <StyledFrame2>
         <StyledFrame201>
-          <StyledImage src="https://placehold.co/386x514" />
-          <StyledNilssonText>
-            Nilsson wears a coat by WE11DONE, shoes by MAISON MARTIN MARGIELA,
-            rings by J. HANNAH, an ear cuff by FARIS, vintage socks, her own
-            earrings and the stylist’s own necklace.
-          </StyledNilssonText>
+          <StyledImage src={imageUrl} />
+          <StyledNilssonText>{subtitle}</StyledNilssonText>
         </StyledFrame201>
+
         <div
           style={{
             width: 306,
@@ -110,27 +113,26 @@ export const Section07 = () => {
             top: 0,
           }}
         >
-          <StyledQuote>
-            “If I’m in a dark place now, I don’t use partying to cope. I try to
-            stay in the feelings and work it out.”
-            <br />
-          </StyledQuote>
+          <StyledQuote>{title}</StyledQuote>
           <StyledQuoteBody>
-            <br />
-            Nilsson, her friends and her husband all still party, and she
-            doesn’t see that changing anytime soon, but now, she explains, it
-            feels more intentional and respectful—both when it comes to others
-            and herself. “If I’m in a dark place now, I don’t use partying to
-            cope,” she says. “I try to stay in the feelings and work it out. And
-            so now partying and doing wild things are things I do when I’m
-            feeling good and I want to enhance the feeling and have a good
-            time.”
+            {body.split("\n").map((line, i) => (
+              <React.Fragment key={i}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}
           </StyledQuoteBody>
         </div>
+
         <StyledFrame202>
-          <StyledImage01 src="https://placehold.co/160x198" />
-          <StyledImage02 src="https://placehold.co/160x197" />
-          <StyledImage03 src="https://placehold.co/160x198" />
+          {subImageUrls.map((url, i) => (
+            <img
+              key={i}
+              src={url}
+              alt={`Sub image ${i + 1}`}
+              style={{ width: 160, height: 198 }}
+            />
+          ))}
         </StyledFrame202>
       </StyledFrame2>
     </StyledSection07>

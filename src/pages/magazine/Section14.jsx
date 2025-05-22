@@ -38,7 +38,7 @@ const StyledSection14 = styled.div`
   display: inline-flex;
 `;
 
-export const Section14 = () => {
+export const Section14 = ({ imageUrl, subImageUrls }) => {
   return (
     <StyledSection14>
       <StyledFrame>
@@ -50,34 +50,22 @@ export const Section14 = () => {
             alignItems: "center",
           }}
         >
-          <StyledImage
-            src="https://placehold.co/482x640"
-            style={{ height: "640px" }}
-          />
+          <StyledImage src={imageUrl} style={{ height: "640px" }} />
         </FlexColumn>
 
         {/* 오른쪽 3개 이미지 */}
         <FlexColumn>
           <div style={{ display: "inline-flex", gap: 40, paddingBottom: 100 }}>
             <FlexColumn>
-              <StyledImage
-                src="https://placehold.co/221x344"
-                style={{ height: "344px" }}
-              />
+              <StyledImage src={subImageUrls[0]} style={{ height: "344px" }} />
             </FlexColumn>
             <FlexColumn>
-              <StyledImage
-                src="https://placehold.co/221x344"
-                style={{ height: "344px" }}
-              />
+              <StyledImage src={subImageUrls[1]} style={{ height: "344px" }} />
             </FlexColumn>
           </div>
           <div style={{ display: "inline-flex", gap: 40, paddingBottom: 100 }}>
             <FlexColumn>
-              <StyledImage
-                src="https://placehold.co/482x257"
-                style={{ height: "257px" }}
-              />
+              <StyledImage src={subImageUrls[2]} style={{ height: "257px" }} />
             </FlexColumn>
           </div>
         </FlexColumn>

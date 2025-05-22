@@ -48,23 +48,18 @@ const BodyText = styled.div`
   line-height: 30px;
 `;
 
-export const Section13 = () => {
+export const Section13 = ({ title, subtitle, body }) => {
   return (
     <SectionWrapper>
-      <Heading>Tak for nu, København.</Heading>
-      <Subheading>
-        No dramatic moments. Just quiet impressions that stay.
-      </Subheading>
+      <Heading>{title}</Heading>
+      <Subheading>{subtitle}</Subheading>
       <BodyText>
-        마지막 날은 특별한 계획 없이 시내를 계속 걸었다.
-        <br />
-        오후에는 인어공주 동상 쪽으로 이동해 공원 벤치에서 책을 읽었다. <br />
-        바람은 차가웠고, 햇빛은 오후 4시부터 빠르게 기울기 시작했다.
-        <br />
-        코펜하겐은 ‘정리된 일상’에 가까운 도시였다.
-        <br />
-        관광지의 강한 자극보다, 질서 있는 삶의 흐름이 더 기억에 남는다.
-        <br />그 자체로도 충분히 여행의 의미를 만들었다.
+        {body.split("\n").map((line, i) => (
+          <React.Fragment key={i}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
       </BodyText>
     </SectionWrapper>
   );

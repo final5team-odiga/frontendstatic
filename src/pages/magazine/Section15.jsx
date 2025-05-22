@@ -42,12 +42,12 @@ const Subtitle = styled.p`
   margin: 0;
 `;
 
-export const Section15 = () => {
+export const Section15 = ({ tagline, title, subtitle }) => {
   return (
     <Section15Wrapper>
-      <CategoryText>ARTS & CULTURE, FASHION, ISSUE 49</CategoryText>
-      <Title>A WORLD OF DIFFERENCE</Title>
-      <Subtitle>A fun lesson in cultural faux pas.</Subtitle>
+      <CategoryText>{tagline}</CategoryText>
+      <Title>{title}</Title>
+      <Subtitle>{subtitle}</Subtitle>
     </Section15Wrapper>
   );
 };

@@ -34,12 +34,12 @@ const StyledSection12 = styled.div`
   display: inline-flex;
 `;
 
-export const Section12 = () => {
+export const Section12 = ({ subImageUrls }) => {
   return (
     <StyledSection12>
       <StyledFrame1>
-        <StyledImage src="https://placehold.co/391x607" alt="Image 1" />
-        <StyledImage01 src="https://placehold.co/391x607" alt="Image 2" />
+        <StyledImage src={subImageUrls[0]} alt="Image 1" />
+        <StyledImage01 src={subImageUrls[1]} alt="Image 2" />
       </StyledFrame1>
     </StyledSection12>
   );
