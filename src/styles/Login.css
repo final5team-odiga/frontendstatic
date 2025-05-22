@@ -14,7 +14,7 @@
 .magazine-title {
   position: absolute;
   top: 80px;
-  left: 47%;
+  left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
@@ -65,6 +65,7 @@
 .login-content {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   margin-top: 13px;
   margin-bottom: 48px;
 }
@@ -75,7 +76,7 @@
   flex-shrink: 0;
   align-items: flex-start;
   margin-top: 150px;
-  margin-right: 90px;
+  margin-right: 0;
 }
 
 .login-form-wrapper {
@@ -247,6 +248,7 @@
   position: relative;
   left: 49%;
   transform: translateX(-50%);
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
 }
 .signup-link-text {
   color: #a294f9;
@@ -254,6 +256,7 @@
   cursor: pointer;
   transition: color 0.2s;
   font-weight: 500;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
 }
 .signup-link-text:hover {
   color: #7d6fd3;

@@ -1,79 +1,118 @@
+@font-face {
+  font-family: 'OngleafBakDahyun';
+  src: url('../../public/fonts/온글잎 박다현체.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 전체에 폰트 적용 */
+body, .home-container, .home-content, .home-header, .header-content,
+.header-menu, .section-title, .weather-labels, .weather-colons,
+.temperature, .chat-text, .chat-link, .arrow-text {
+  font-family: 'OngleafBakDahyun', sans-serif;
+}
+
+/* 상단 링크만 기본 폰트로 */
+.header-links {
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
+  font-size: 18px;
+  color: #3A3A3A;
+  margin-bottom: 29px;
+  letter-spacing: 0.01em;
+}
+
+body, #root, .home-bg {
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background: #FDFBEE;
+  margin: 0;
+  padding: 0;
+}
+
 .home-container {
   display: flex;
   flex-direction: column;
   background-color: #FFFFFF;
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
 }
 
 .home-content {
-  align-self: stretch;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   background-color: #FFFFFF;
-  height: 1229px;
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Header Styles */
 .home-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
-  background-color: #FDFBEE;
+  width: 100vw;
+  background: #FDFBEE;
+  box-shadow: 0px 2px 4px #00000020;
 }
 
 .header-content {
   display: flex;
-  align-items: flex-start;
-  align-self: stretch;
-  background-color: #FDFBEE;
-  padding: 16px 16px 16px 42px;
-  margin-bottom: 120px;
-  box-shadow: 0px 2px 4px #00000040;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background: transparent;
+  padding: 16px 32px 16px 42px;
+  box-shadow: none;
 }
 
 .header-logo {
-  width: 262px;
-  height: 95px;
+  width: 220px;
+  height: 80px;
   margin-top: 4px;
-  margin-right: 78px;
-  object-fit: fill;
+  margin-right: 60px;
+  object-fit: contain;
 }
 
 .header-menu {
   color: #000000;
-  font-size: 38px;
-  margin-top: 59px;
-  margin-right: 65px;
+  font-size: 34px;
+  margin-top: 50px;
+  margin-right: 48px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.header-menu:last-child {
+  margin-right: 0;
 }
 
 .header-menu.community {
   flex: 1;
   text-align: center;
-  margin-right: 0;
 }
 
 .header-right {
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
-  align-items: flex-start;
-}
-
-.header-links {
-  color: #3A3A3A;
-  font-size: 18px;
-  margin-bottom: 29px;
+  align-items: flex-end;
+  margin-left: 40px;
 }
 
 .header-icons {
   display: flex;
-  align-items: flex-start;
-  margin-left: 102px;
+  align-items: center;
+  margin-left: 0;
 }
 
 .header-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 30px;
-  object-fit: fill;
+  width: 32px;
+  height: 32px;
+  margin-right: 18px;
+  object-fit: contain;
 }
 
 .header-icon:last-child {
@@ -84,125 +123,207 @@
 .weather-section {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 56px;
-  margin-left: 66px;
+  justify-content: center;
+  margin: 40px 0 0 0;
+  width: 100%;
+  min-height: 220px;
 }
 
 .section-title {
   color: #000000;
-  font-size: 36px;
-  margin-right: 766px;
+  font-size: 32px;
+  margin-right: 60px;
+  margin-top: 10px;
+  min-width: 180px;
+  text-align: left;
 }
 
 .weather-info {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.weather-labels {
+.weather-labels, .weather-colons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #000000;
-  font-size: 38px;
-  margin-right: 18px;
-  white-space: pre-line;
+  font-size: 28px;
+  margin-right: 8px;
+  line-height: 1.7;
 }
 
 .weather-colons {
-  color: #000000;
-  font-size: 38px;
-  margin-top: 26px;
-  margin-right: 42px;
-  white-space: pre-line;
+  margin-right: 18px;
 }
 
 .weather-icons {
   display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
+  flex-direction: row;
   align-items: center;
-  margin-top: 11px;
-  margin-right: 30px;
-}
-
-.weather-icons:last-child {
+  margin-top: 0;
   margin-right: 0;
+  gap: 18px;
 }
 
 .weather-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 32px;
-  object-fit: fill;
-}
-
-.weather-icon:last-child {
-  margin-bottom: 0;
+  width: 36px;
+  height: 36px;
+  margin: 0 6px 0 0;
+  object-fit: contain;
 }
 
 .temperature {
   color: #000000;
-  font-size: 38px;
-  margin-bottom: 35px;
+  font-size: 28px;
+  margin: 0 18px 0 0;
+  align-self: center;
 }
 
 /* Chat Section Styles */
 .chat-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: flex-end;
-  align-self: stretch;
+  width: 100%;
+  margin-top: 60px;
+  min-height: 320px;
 }
 
 .chat-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-right: 72px;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-right: 80px;
+  gap: 32px;
 }
 
 .chat-bubble {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   background-image: url('https://storage.googleapis.com/tagjs-prod.appspot.com/v1/AiqsF1Zsxi/cujylbni_expires_30_days.png');
   background-size: cover;
   background-position: center;
-  padding: 70px 45px 101px 33px;
+  padding: 36px 28px 48px 20px;
+  border-radius: 24px;
+  margin-bottom: 12px;
+  min-width: 260px;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
 }
 
 .chat-text {
   color: #000000;
-  font-size: 30px;
-  width: 244px;
+  font-size: 20px;
+  width: 220px;
+  line-height: 1.5;
 }
 
 .chat-action {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  align-self: stretch;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .chat-link {
   color: #A294F9;
+  font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 8px;
 }
 
 .chat-arrow {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  align-self: stretch;
 }
 
 .arrow-text {
   color: #A294F9;
-  font-size: 80px;
-  margin-right: 4px;
+  font-size: 48px;
+  margin-right: 2px;
 }
 
 .chat-image {
-  width: 371px;
-  height: 371px;
-  margin-left: 207px;
-  object-fit: fill;
+  width: 180px;
+  height: 180px;
+  margin-left: 24px;
+  object-fit: contain;
+}
+
+/* 반응형 예시 */
+@media (max-width: 900px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 8px 12px 16px;
+  }
+  .header-logo {
+    width: 160px;
+    height: 60px;
+    margin-right: 24px;
+  }
+  .header-menu {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-right: 18px;
+  }
+  .header-right {
+    margin-left: 0;
+  }
+  .chat-container {
+    margin-right: 10px;
+  }
+  .chat-image {
+    width: 120px;
+    height: 120px;
+    margin-left: 30px;
+  }
+}
+
+.home-main {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: calc(100vh - 120px); /* 상단바 높이만큼 빼기 */
+  min-height: 600px;
+}
+
+.home-left {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 60px 40px 0 80px;
+  min-width: 350px;
+  /* 여행 매거진 스타일 */
+}
+
+.home-right {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 60px 80px 60px 40px;
+  min-width: 350px;
+  height: 100%;
+  /* 날씨/기온/기분/챗봇 스타일 */
+  /* 필요시 max-width: 700px; 등 */
+}
+
+.weather-area {
+  /* 상단 영역 */
+  margin-bottom: 40px;
+}
+
+.chatbot-area {
+  /* 하단 영역 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 } 
