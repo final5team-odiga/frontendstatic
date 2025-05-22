@@ -1,3 +1,7 @@
+body, .agreement-bg, .agreement-wrapper, .agreement-content, .agreement-box, .agreement-all-check, .agreement-desc, .agreement-section, .agreement-section-title, .agreement-section-desc, .agreement-event-text, .agreement-next-btn, .agreement-side-box, .agreement-side-img, .agreement-bg-img, .agreement-bg-shadow, .language-button, .language-icon, .language-text, .arrow-icon, .agreement-checkbox-row, .agreement-checkbox-label, .agreement-required, .agreement-optional {
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif !important;
+}
+
 .agreement-bg {
   min-height: 100vh;
   background: #fcf8e8;
@@ -26,7 +30,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  right: 2%;
+  justify-content: center;
+  right: 0;
+  left: 0;
   z-index: 2;
 }
 
