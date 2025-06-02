@@ -5,325 +5,312 @@
   font-style: normal;
 }
 
-/* 전체에 폰트 적용 */
-body, .home-container, .home-content, .home-header, .header-content,
-.header-menu, .section-title, .weather-labels, .weather-colons,
-.temperature, .chat-text, .chat-link, .arrow-text {
-  font-family: 'OngleafBakDahyun', sans-serif;
-}
 
-/* 상단 링크만 기본 폰트로 */
-.header-links {
-  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
-  font-size: 18px;
-  color: #3A3A3A;
-  margin-bottom: 29px;
-  letter-spacing: 0.01em;
-}
-
-body, #root, .home-bg {
-  min-width: 100vw;
-  min-height: 100vh;
+body, #root {
   width: 100vw;
+  min-width: 0;
+  min-height: 0;
   height: 100vh;
-  background: #FDFBEE;
   margin: 0;
   padding: 0;
-}
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-  background-color: #FFFFFF;
-  min-height: 100vh;
-  min-width: 100vw;
-  width: 100vw;
-  height: 100vh;
-}
-
-.home-content {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  background-color: #FFFFFF;
-  min-height: 100vh;
-  min-width: 100vw;
-  width: 100vw;
-  height: 100vh;
-}
-
-/* Header Styles */
-.home-header {
-  width: 100vw;
   background: #FDFBEE;
-  box-shadow: 0px 2px 4px #00000020;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+  overflow-y: auto;   /* 세로 스크롤만 필요시 */
 }
 
-.header-content {
+.home-bg {
+  width: 100vw;
+  min-width: 0;
+  min-height: 0;
+  height: 100vh;
+  background: #FDFBEE;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.home-container, .home-content {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
   background: transparent;
-  padding: 16px 32px 16px 42px;
-  box-shadow: none;
-}
-
-.header-logo {
-  width: 220px;
-  height: 80px;
-  margin-top: 4px;
-  margin-right: 60px;
-  object-fit: contain;
-}
-
-.header-menu {
-  color: #000000;
-  font-size: 34px;
-  margin-top: 50px;
-  margin-right: 48px;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.header-menu:last-child {
-  margin-right: 0;
-}
-
-.header-menu.community {
-  flex: 1;
-  text-align: center;
-}
-
-.header-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-left: 40px;
-}
-
-.header-icons {
-  display: flex;
-  align-items: center;
-  margin-left: 0;
-}
-
-.header-icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 18px;
-  object-fit: contain;
-}
-
-.header-icon:last-child {
-  margin-right: 0;
-}
-
-/* Weather Section Styles */
-.weather-section {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 40px 0 0 0;
-  width: 100%;
-  min-height: 220px;
-}
-
-.section-title {
-  color: #000000;
-  font-size: 32px;
-  margin-right: 60px;
-  margin-top: 10px;
-  min-width: 180px;
-  text-align: left;
-}
-
-.weather-info {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.weather-labels, .weather-colons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #000000;
-  font-size: 28px;
-  margin-right: 8px;
-  line-height: 1.7;
-}
-
-.weather-colons {
-  margin-right: 18px;
-}
-
-.weather-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 0;
-  margin-right: 0;
-  gap: 18px;
-}
-
-.weather-icon {
-  width: 36px;
-  height: 36px;
-  margin: 0 6px 0 0;
-  object-fit: contain;
-}
-
-.temperature {
-  color: #000000;
-  font-size: 28px;
-  margin: 0 18px 0 0;
-  align-self: center;
-}
-
-/* Chat Section Styles */
-.chat-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 100%;
-  margin-top: 60px;
-  min-height: 320px;
-}
-
-.chat-container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin-right: 80px;
-  gap: 32px;
-}
-
-.chat-bubble {
-  background-image: url('https://storage.googleapis.com/tagjs-prod.appspot.com/v1/AiqsF1Zsxi/cujylbni_expires_30_days.png');
-  background-size: cover;
-  background-position: center;
-  padding: 36px 28px 48px 20px;
-  border-radius: 24px;
-  margin-bottom: 12px;
-  min-width: 260px;
-  min-height: 110px;
-  display: flex;
-  align-items: center;
-}
-
-.chat-text {
-  color: #000000;
-  font-size: 20px;
-  width: 220px;
-  line-height: 1.5;
-}
-
-.chat-action {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-bottom: 8px;
-}
-
-.chat-link {
-  color: #A294F9;
-  font-size: 20px;
-  text-decoration: underline;
-  cursor: pointer;
-  margin-bottom: 8px;
-}
-
-.chat-arrow {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.arrow-text {
-  color: #A294F9;
-  font-size: 48px;
-  margin-right: 2px;
-}
-
-.chat-image {
-  width: 180px;
-  height: 180px;
-  margin-left: 24px;
-  object-fit: contain;
-}
-
-/* 반응형 예시 */
-@media (max-width: 900px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 8px 12px 16px;
-  }
-  .header-logo {
-    width: 160px;
-    height: 60px;
-    margin-right: 24px;
-  }
-  .header-menu {
-    font-size: 22px;
-    margin-top: 20px;
-    margin-right: 18px;
-  }
-  .header-right {
-    margin-left: 0;
-  }
-  .chat-container {
-    margin-right: 10px;
-  }
-  .chat-image {
-    width: 120px;
-    height: 120px;
-    margin-left: 30px;
-  }
+  box-sizing: border-box;
 }
 
 .home-main {
+  flex: 1 1 0;
   display: flex;
   flex-direction: row;
-  width: 100vw;
-  height: calc(100vh - 120px); /* 상단바 높이만큼 빼기 */
-  min-height: 600px;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+  overflow: visible;
+  height: calc(100vh - 120px);
 }
 
+/* 왼쪽(매거진) */
 .home-left {
   flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  min-width: 0;
+  min-height: 0;
   padding: 60px 40px 0 80px;
-  min-width: 350px;
-  /* 여행 매거진 스타일 */
+  box-sizing: border-box;
 }
 
+.section-title {
+  font-size: 35px !important;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.magazine-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.magazine-animation {
+  width: 470px;
+  max-width: 70%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left: 15%;
+  margin-top: -10%;
+}
+.magazine-animation:hover {
+  transform: scale(1.02);
+}
+
+.click-indicator {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 38px;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0.92;
+}
+
+.click-indicator-inline {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-left: 20px;
+  display: inline-block;
+  opacity: 0.92;
+}
+
+/* 오른쪽(날씨/기온/기분/챗봇) */
 .home-right {
-  flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-end;
-  padding: 60px 80px 60px 40px;
-  min-width: 350px;
+  justify-content: flex-start;
+  padding: 60px 40px 20px 0;
   height: 100%;
-  /* 날씨/기온/기분/챗봇 스타일 */
-  /* 필요시 max-width: 700px; 등 */
+  position: relative;
+}
+
+.note-center {
+  margin-bottom: 80px;
+  margin-right: 0;
 }
 
 .weather-area {
-  /* 상단 영역 */
   margin-bottom: 40px;
+  width: 100%;
 }
-
-.chatbot-area {
-  /* 하단 영역 */
+.weather-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  width: 100%;
+  min-height: 120px;
+  background: none;
+  margin-right: 160px;
+}
+.weather-row, .temperature-row, .emotion-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+  min-height: 48px;
+}
+.weather-label, .temperature-label, .emotion-label {
+  font-size: 28px !important;
+  font-weight: bold !important;
+  margin-right: 18px;
+  color: #222;
+  min-width: 70px;
+}
+.weather-icon, .emotion-icon {
+  width: 38px;
+  height: 38px;
+  margin-right: 16px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.weather-row img:last-child,
+.emotion-row img:last-child {
+  margin-right: 0;
+}
+.temperature-value {
+  font-size: 28px;
+  margin-left: 2px;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+.emotion-icons-container {
+  display: flex;
+  align-items: center;
+}
+
+/* 챗봇/오른쪽 하단 */
+.home-chatbot-center {
+  position: relative;
+  width: 600px;
+  height: 260px;
+  margin-right: 0;
+}
+.home-chatbot-area {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.home-chatbot-bubble {
+  position: absolute;
+  left: -25px;
+  bottom: -45px;
+  width: 330px;
+  height: 180px;
+  transform: none;
+  background: url('../../public/images/chat-bubble.svg') no-repeat center/contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 35px 45px 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  z-index: 3;
+  box-sizing: border-box;
+}
+.home-chatbot-action {
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  z-index: 4;
+  text-align: right;
+}
+.home-chatbot-action-text {
+  font-size: 32px;
+  color: #A294F9;
+  font-weight: bold;
+  text-decoration: none;
+}
+.home-chatbot-shadow {
+  position: absolute;
+  left: 204px;
+  bottom: -205px;
+  width: 200px;
+  height: 30px;
+  opacity: 0.5;
+  z-index: 1;
+}
+.home-chatbot-character {
+  position: absolute;
+  left: 155px;
+  bottom: -230px;
+  width: 300px;
+  height: 300px;
+  z-index: 2;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .home-main {
+    flex-direction: column;
+    height: auto;
+  }
+  .home-left, .home-right {
+    padding: 20px 10px;
+  }
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .magazine-animation {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  .weather-label, .temperature-label, .emotion-label {
+    font-size: 18px;
+    min-width: 40px;
+  }
+  .weather-icon, .emotion-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 7px;
+  }
+  .temperature-value {
+    font-size: 20px;
+  }
+  .home-right {
+    padding: 40px 0 20px 0;
+  }
+  .note-center {
+    margin-bottom: 40px;
+    margin-right: 40px;
+  }
+  .home-chatbot-center {
+    width: 400px;
+    height: 200px;
+    margin-right: 20px;
+  }
+  .home-chatbot-character {
+    width: 150px;
+    height: 150px;
+    left: 160px;
+    bottom: -160px;
+  }
+  .home-chatbot-shadow {
+    width: 80px;
+    height: 15px;
+    left: 195px;
+    bottom: -145px;
+  }
+  .home-chatbot-bubble {
+    width: 220px;
+    height: 100px;
+    left: -20px;
+    bottom: -20px;
+    font-size: 14px;
+    padding: 10px 30px;
+  }
+  .home-chatbot-action-text {
+    font-size: 18px;
+  }
+  .home-chatbot-action {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+.header-links a {
+  text-decoration: none;
+  color: #3A3A3A;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
+  font-size: 14px;
+  margin: 0 2px;
+  transition: color 0.2s;
+}
+
+.header-links a:hover {
+  color: #A294F9;
+  text-decoration: underline;
 } 
