@@ -15,7 +15,7 @@ export default function SignUp() {
   const [language, setLanguage] = useState('한국어');
 
   const handleNext = () => {
-    navigate('/home');  // 홈으로 이동
+    navigate('/');  // 홈으로 이동
   };
 
   return (
